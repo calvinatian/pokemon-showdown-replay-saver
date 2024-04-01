@@ -62,6 +62,7 @@ def save_replay(id, format, log_format="inputlog", output_dir="logs"):
     Path(f"{output_dir}/{format}").mkdir(parents=True, exist_ok=True)
     with open(f"{output_dir}/{format}/{id}.{log_format}", "w") as f:
         f.write(response.text)
+    return True
 
 
 def main():
